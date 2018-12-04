@@ -1,7 +1,7 @@
 package haivu.com.navigationsample.ui.main
 
-import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,27 +12,24 @@ import androidx.navigation.Navigation
 import haivu.com.navigationsample.R
 import kotlinx.android.synthetic.main.main_fragment.*
 
-class MainFragment : Fragment() {
+class HomeFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = MainFragment()
-    }
+//    companion object {
+//        fun newInstance() = HomeFragment()
+//    }
 
-    private lateinit var viewModel: MainViewModel
+//    private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflat first
-        val view = inflater.inflate(R.layout.main_fragment, container, false)
+        val view = inflater.inflate(R.layout.home_fragment, container, false)
+        val homeBtn = view.findViewById<Button>(R.id.homeBtn)
+        homeBtn.setOnClickListener{view ->
+            Navigation.findNavController(view).navigate(R.id.mainFragment)
+        }
         return view
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }
