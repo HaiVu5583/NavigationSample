@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp" tools:srcCompat="@tools:sample/avatars[12]"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:layout_marginStart="8dp"
+            android:id="@+id/avatar"
+            android:background="@drawable/avatar_round"
+    />
+    <TextView
+            android:text="Vũ Long Hải"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userName" app:layout_constraintStart_toEndOf="@+id/avatar"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@+id/avatar"/>
+    <TextView
+            android:text="Ha Noi, Viet Nam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userInfo"
+            app:layout_constraintTop_toBottomOf="@+id/userName" app:layout_constraintStart_toStartOf="@+id/userName"
+    />
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="250dp" tools:srcCompat="@tools:sample/backgrounds/scenic[7]"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:id="@+id/featureImage"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/avatar"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            android:scaleType="fitXY" android:background="@color/colorAccent"/>
+    <TextView
+            android:text="&#xf8cf;"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loveIcon" app:fontFamily="@font/material_icon"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/featureImage"
+            tools:text="&#xf8cf;" android:textSize="24sp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"/>
+    <TextView
+            android:text="&#xf367;"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentIcon"
+            app:layout_constraintTop_toTopOf="@+id/loveIcon" app:layout_constraintBottom_toBottomOf="@+id/loveIcon"
+            android:textSize="24sp" app:fontFamily="@font/material_icon" tools:text="&#xf367;"
+            app:layout_constraintStart_toEndOf="@+id/loveIcon" android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"/>
+    <TextView
+            android:text="&#xf48a;"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/loveIcon" android:textSize="24sp"
+            app:fontFamily="@font/material_icon" app:layout_constraintTop_toTopOf="@+id/loveIcon"
+            tools:text="&#xf48a;" app:layout_constraintStart_toEndOf="@+id/commentIcon" android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="&#xf0c0;"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookmarkIcon"
+            app:layout_constraintTop_toTopOf="@+id/loveIcon" app:layout_constraintBottom_toBottomOf="@+id/loveIcon"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:fontFamily="@font/material_icon" android:textSize="24sp" tools:text="&#xf0c0;"/>
+
+</android.support.constraint.ConstraintLayout>
