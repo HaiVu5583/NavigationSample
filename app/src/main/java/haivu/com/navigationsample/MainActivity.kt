@@ -1,12 +1,9 @@
 package haivu.com.navigationsample
 
-import android.app.TaskStackBuilder
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import androidx.navigation.Navigation
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 
 class MainActivity : AppCompatActivity() {
