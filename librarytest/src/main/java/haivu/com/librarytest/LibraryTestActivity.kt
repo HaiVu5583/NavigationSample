@@ -9,6 +9,4 @@ class LibraryTestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.library_test_main_activity)
     }
-
-
 }

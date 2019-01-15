@@ -1,1 +1,2 @@
-include ':app', ':mshop', ':librarytest'
+include ':app'
+//, ':librarytest'
