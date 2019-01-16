@@ -12,8 +12,11 @@ import android.widget.Button
 import androidx.navigation.Navigation
 //import haivu.com.librarytest.LibraryTestActivity
 import haivu.com.navigationsample.R
-import com.mshopsdk.MShopActivity;
-import kotlinx.android.synthetic.main.main_fragment.*
+import com.mshopsdk.MShop;
+import com.mshopsdk.MShopTags;
+import android.app.Activity
+import android.widget.Toast
+
 
 class HomeFragment : Fragment() {
 
@@ -31,9 +34,7 @@ class HomeFragment : Fragment() {
         val homeBtn = view.findViewById<Button>(R.id.homeBtn)
         homeBtn.setOnClickListener{view ->
 //            Navigation.findNavController(view).navigate(R.id.mainFragment)
-            val intent = Intent(view.context, MShopActivity::class.java)
-            startActivity(intent)
-//            Log.d("haivu", VNPAYTags.LANG_VN)
+           MShop.start(activity);
         }
         return view
     }
