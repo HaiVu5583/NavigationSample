@@ -34,7 +34,13 @@ class HomeFragment : Fragment() {
         val homeBtn = view.findViewById<Button>(R.id.homeBtn)
         homeBtn.setOnClickListener{view ->
 //            Navigation.findNavController(view).navigate(R.id.mainFragment)
-           MShop.start(activity);
+//           MShop.start(activity);
+            MShop.builder()
+                .setUserId("1001")
+                .setPhoneNumber("0977865062")
+                .setName("Vũ Long Hải")
+                .setAvatar("https://nerdist.com/wp-content/uploads/2016/09/20160930_n_nerdistnews_drstrangeinfinity_1x1.jpg")
+                .start(activity)
         }
         return view
     }
